@@ -1,0 +1,18 @@
+print('Age Calculator')
+print('Input Current Day')
+month1 = int(input('MONTH: '))  # today's date
+day1 = int(input('DAY: '))  # today's date
+year1 = int(input('YEAR: '))  # today's date
+print('Input Birthday')
+month2 = int(input("MONTH: "))  # birthday
+day2 = int(input("DAY: "))  # birthday
+year2 = int(input("YEAR: "))  # birthday
+years = year1 - year2 - 1
+if month2 < month1:
+    years += 1
+elif month1 == month2:
+    if day1 < day2:
+        years += 1
+if month1 == month2 and day1 == day2:
+    print('Happy birthday')
+print('You are ' + str(years) + "years old.")
